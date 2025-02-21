@@ -1,0 +1,19 @@
+{
+  "name": "hardhat-project",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.12",
+    "hardhat": "^2.22.17"
+  },
+  "scripts": {
+    "build": "npx hardhat compile",
+    "deploy_imuu": "npx hardhat ignition deploy ignition/modules/ImulationUnchained.ts --network base-sepolia --strategy create2",
+    "verify_imuu": "npx hardhat verify --network bscTestnet",
+    "verify_example": "npx hardhat verify --network bnb 0xDeployedContractAddress 'constructor_param_1' 'constructor_param_2' 'constructor_param_3'"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.1.0",
+    "dotenv": "^16.4.7",
+    "wormhole-solidity-sdk": "^0.9.0"
+  }
+}
