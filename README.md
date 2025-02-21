@@ -1,13 +1,12 @@
-# Sample Hardhat Project
+# Broccoli Unchained ERC-20 Meme Coin
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+This project contains the smart contract source code for the Broccoli Unchained meme coin, its sister testnet tokens and utils.
 
 Try running some of the following tasks:
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.ts
+npm install
+npm run build
+npm run deploy_brocuTest
+npm run verify_example
 ```
