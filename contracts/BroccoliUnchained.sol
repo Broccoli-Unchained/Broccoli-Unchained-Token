@@ -116,6 +116,9 @@ contract BroccoliUnchained is
 
     event CrossChainReceived(uint256 amount, address owner, uint16 sourceChain);
 
+    // Add a new state variable for mining start timestamp
+    uint256 public miningStartTimestamp;
+
     /*
         ---------------------------------------------------------
         Constructor
@@ -133,9 +136,6 @@ contract BroccoliUnchained is
         miningTarget = _MAXIMUM_TARGET;
         latestDifficultyPeriodStarted = block.number;
         challengeNumber = blockhash(block.number - 1);
-
-        // Set the time of next halving to be 6 months from now
-        nextHalvingTime = block.timestamp + HALVING_PERIOD;
 
         // Initialize allowed chains (example: 1 for Ethereum mainnet, 2 for Binance Smart Chain)
         allowedChains[8453] = true; // Coinbase Base
@@ -200,6 +200,11 @@ contract BroccoliUnchained is
         ); // X Layer Mainnet
 
         wormholeRelayer = IWormholeRelayer(wormholeRelayers[block.chainid]);
+
+        miningStartTimestamp = 1740204000; // Set the mining start timestamp
+
+        // Set the time of next halving to be 6 months from now
+        nextHalvingTime = miningStartTimestamp + HALVING_PERIOD;
     }
 
     /*
@@ -317,6 +322,7 @@ contract BroccoliUnchained is
         uint256 nonce,
         bytes32
     ) external onlyAllowedChain returns (bool success) {
+        require(block.timestamp >= miningStartTimestamp, "Mining not started yet");
         return mintTo(nonce, msg.sender);
     }
 
@@ -324,6 +330,7 @@ contract BroccoliUnchained is
         uint256 nonce,
         address minter
     ) public onlyAllowedChain returns (bool success) {
+        require(block.timestamp >= miningStartTimestamp, "Mining not started yet");
         // PoW requirement: digest = keccak256(challengeNumber, minter, nonce)
         if (
             totalSupply() + currentMiningReward <
@@ -357,7 +364,7 @@ contract BroccoliUnchained is
         // ---------------------------------------------------------
         // TIME-BASED HALVING: Check if 6-month interval has passed
         // ---------------------------------------------------------
-        if (block.timestamp >= nextHalvingTime) {
+        if (block.timestamp >= nextHalvingTime && block.timestamp >= miningStartTimestamp) {
             rewardEra++;
             // Recalculate the halved reward
             uint256 calculatedReward = (896 * 10 ** decimals()) /
