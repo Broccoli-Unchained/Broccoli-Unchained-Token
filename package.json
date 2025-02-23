@@ -8,6 +8,7 @@
   "scripts": {
     "build": "npx hardhat compile",
     "deploy_brocuTest": "npx hardhat ignition deploy ignition/modules/BroccoliUnchainedTest.ts --network base-sepolia --strategy create2",
+    "deploy_brocuSep": "npx hardhat ignition deploy ignition/modules/BroccoliUnchainedSepolia.ts --network base-sepolia --strategy create2",
     "verify_brocuTest": "npx hardhat verify --network bscTestnet",
     "verify_example": "npx hardhat verify --network bnb 0xDeployedContractAddress 'constructor_param_1' 'constructor_param_2' 'constructor_param_3'"
   },
