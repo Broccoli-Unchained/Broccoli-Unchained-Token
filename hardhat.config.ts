@@ -73,7 +73,7 @@ const config: HardhatUserConfig = {
     "Mantle": {
       url: "https://mantle-rpc.publicnode.com",
       accounts: [process.env.PRIVATE_KEY],
-      chainId: 480
+      chainId: 5000
     },
     "Ethereum": {
       url: "https://ethereum-rpc.publicnode.com",
@@ -100,31 +100,6 @@ const config: HardhatUserConfig = {
       accounts: [process.env.PRIVATE_KEY],
       chainId: 81457
     },
-    "Celo": {
-      url: "https://celo-rpc.publicnode.com",
-      accounts: [process.env.PRIVATE_KEY],
-      chainId: 42220
-    },
-    "Fantom": {
-      url: "https://fantom-rpc.publicnode.com",
-      accounts: [process.env.PRIVATE_KEY],
-      chainId: 250
-    },
-    "Kaia": {
-      url: "https://klaytn.drpc.org",
-      accounts: [process.env.PRIVATE_KEY],
-      chainId: 8217
-    },
-    "Scroll": {
-      url: "https://scroll-rpc.publicnode.com",
-      accounts: [process.env.PRIVATE_KEY],
-      chainId: 534352
-    },
-    "SNAXChain": {
-      url: "https://mainnet.snaxchain.io",
-      accounts: [process.env.PRIVATE_KEY],
-      chainId: 2192
-    },
     "XLayer": {
       url: "https://xlayer.drpc.org",
       accounts: [process.env.PRIVATE_KEY],
@@ -145,13 +120,8 @@ const config: HardhatUserConfig = {
       accounts: [process.env.PRIVATE_KEY],
       chainId: 1868
     },
-    "Lisk": {
-      url: "https://lisk.drpc.org",
-      accounts: [process.env.PRIVATE_KEY],
-      chainId: 1135
-    },
     "Zora": {
-      url: "https://zora.drpc.org",
+      url: "https://rpc.zora.energy",
       accounts: [process.env.PRIVATE_KEY],
       chainId: 7777777
     },
@@ -176,7 +146,7 @@ const config: HardhatUserConfig = {
       chainId: 360
     },
     "Cyber": {
-      url: "https://rpc.cyber.co",
+      url: "https://cyber.alt.technology",
       accounts: [process.env.PRIVATE_KEY],
       chainId: 7560
     }
