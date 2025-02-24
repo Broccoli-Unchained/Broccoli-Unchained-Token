@@ -9,7 +9,9 @@
     "build": "npx hardhat compile",
     "deploy_brocuTest": "npx hardhat ignition deploy ignition/modules/BroccoliUnchainedTest.ts --network base-sepolia --strategy create2",
     "deploy_brocuSep": "npx hardhat ignition deploy ignition/modules/BroccoliUnchainedSepolia.ts --network base-sepolia --strategy create2",
-    "verify_brocuTest": "npx hardhat verify --network bscTestnet",
+    "deploy_brocu": "npx hardhat ignition deploy ignition/modules/BroccoliUnchained.ts --network base --strategy create2",
+    "verify_brocuTest": "npx hardhat verify --network bscTestnet 0x85BD88eE941105696108C27807222f39fC94A696",
+    "verify_brocuSep": "npx hardhat verify --network bscTestnet 0xD2aF5453D9a25FB02644b190Ee7bC5cc4102D440",
     "verify_example": "npx hardhat verify --network bnb 0xDeployedContractAddress 'constructor_param_1' 'constructor_param_2' 'constructor_param_3'"
   },
   "dependencies": {
