@@ -12,6 +12,7 @@
     "deploy_brocu": "npx hardhat ignition deploy ignition/modules/BroccoliUnchained.ts --network base --strategy create2",
     "verify_brocuTest": "npx hardhat verify --network bscTestnet 0x85BD88eE941105696108C27807222f39fC94A696",
     "verify_brocuSep": "npx hardhat verify --network bscTestnet 0xD2aF5453D9a25FB02644b190Ee7bC5cc4102D440",
+    "verify_brocu": "npx hardhat verify --network bsc 0x1C55f95a3C2CEfba94C41bBa2d6200F7a0Db0651",
     "verify_example": "npx hardhat verify --network bnb 0xDeployedContractAddress 'constructor_param_1' 'constructor_param_2' 'constructor_param_3'"
   },
   "dependencies": {

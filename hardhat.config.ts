@@ -65,22 +65,22 @@ const config: HardhatUserConfig = {
       accounts: [process.env.PRIVATE_KEY],
       chainId: 137
     },
-    "WorldChain": {
+    "worldChain": {
       url: "https://worldchain.drpc.org",
       accounts: [process.env.PRIVATE_KEY],
       chainId: 480
     },
-    "Mantle": {
+    "mantle": {
       url: "https://mantle-rpc.publicnode.com",
       accounts: [process.env.PRIVATE_KEY],
       chainId: 5000
     },
-    "Ethereum": {
+    "mainnet": {
       url: "https://ethereum-rpc.publicnode.com",
       accounts: [process.env.PRIVATE_KEY],
       chainId: 1
     },
-    "op-mainnet": {
+    "optimisticEthereum": {
       url: "https://optimism-rpc.publicnode.com",
       accounts: [process.env.PRIVATE_KEY],
       chainId: 10
@@ -144,18 +144,13 @@ const config: HardhatUserConfig = {
       url: "https://shape-mainnet.g.alchemy.com/public",
       accounts: [process.env.PRIVATE_KEY],
       chainId: 360
-    },
-    "Cyber": {
-      url: "https://cyber.alt.technology",
-      accounts: [process.env.PRIVATE_KEY],
-      chainId: 7560
     }
   },
   etherscan: {
     apiKey: {
       bscTestnet: process.env.BSCSCAN_API_KEY ?? '',
       bsc: process.env.BSCSCAN_API_KEY ?? '',
-      mainnet: process.env.BASESCAN_API_KEY ?? '',
+      mainnet: process.env.ETHERSCAN_API_KEY ?? '',
       optimisticEthereum: process.env.OPSCAN_API_KEY ?? '',
       polygon: process.env.POLYGONSCAN_API_KEY ?? '',
       base: process.env.BASESCAN_API_KEY ?? '',
