@@ -59,6 +59,126 @@ const config: HardhatUserConfig = {
       url: "https://bsc-rpc.publicnode.com",
       accounts: [process.env.PRIVATE_KEY],
       chainId: 56
+    },
+    "polygon": {
+      url: "https://polygon-bor-rpc.publicnode.com",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 137
+    },
+    "WorldChain": {
+      url: "https://worldchain.drpc.org",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 480
+    },
+    "Mantle": {
+      url: "https://mantle-rpc.publicnode.com",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 480
+    },
+    "Ethereum": {
+      url: "https://ethereum-rpc.publicnode.com",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 1
+    },
+    "op-mainnet": {
+      url: "https://optimism-rpc.publicnode.com",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 10
+    },
+    "ArbitrumOne": {
+      url: "https://arbitrum-one-rpc.publicnode.com",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 42161
+    },
+    "Avalanche": {
+      url: "https://avalanche-c-chain-rpc.publicnode.com",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 43114
+    },
+    "Blast": {
+      url: "https://blast-rpc.publicnode.com",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 81457
+    },
+    "Celo": {
+      url: "https://celo-rpc.publicnode.com",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 42220
+    },
+    "Fantom": {
+      url: "https://fantom-rpc.publicnode.com",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 250
+    },
+    "Kaia": {
+      url: "https://klaytn.drpc.org",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 8217
+    },
+    "Scroll": {
+      url: "https://scroll-rpc.publicnode.com",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 534352
+    },
+    "SNAXChain": {
+      url: "https://mainnet.snaxchain.io",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 2192
+    },
+    "XLayer": {
+      url: "https://xlayer.drpc.org",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 196
+    },
+    "Unichain": {
+      url: "https://unichain-rpc.publicnode.com",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 130
+    },
+    "Ink": {
+      url: "https://ink.drpc.org",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 57073
+    },
+    "Soneium": {
+      url: "https://soneium.drpc.org",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 1868
+    },
+    "Lisk": {
+      url: "https://lisk.drpc.org",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 1135
+    },
+    "Zora": {
+      url: "https://zora.drpc.org",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 7777777
+    },
+    "Mode": {
+      url: "https://mode.drpc.org",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 34443
+    },
+    "MetalL2": {
+      url: "https://metall2.drpc.org",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 1750
+    },
+    "Bob": {
+      url: "https://bob.drpc.org",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 60808
+    },
+    "Shape": {
+      url: "https://shape-mainnet.g.alchemy.com/public",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 360
+    },
+    "Cyber": {
+      url: "https://rpc.cyber.co",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 7560
     }
   },
   etherscan: {

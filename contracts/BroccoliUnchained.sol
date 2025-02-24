@@ -201,7 +201,7 @@ contract BroccoliUnchained is
 
         wormholeRelayer = IWormholeRelayer(wormholeRelayers[block.chainid]);
 
-        miningStartTimestamp = 1740204000; // Set the mining start timestamp
+        miningStartTimestamp = 1740808800; // Set the mining start timestamp
 
         // Set the time of next halving to be 6 months from now
         nextHalvingTime = miningStartTimestamp + HALVING_PERIOD;
