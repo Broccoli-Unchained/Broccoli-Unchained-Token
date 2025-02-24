@@ -185,18 +185,31 @@ const config: HardhatUserConfig = {
     apiKey: {
       bscTestnet: process.env.BSCSCAN_API_KEY ?? '',
       bsc: process.env.BSCSCAN_API_KEY ?? '',
-      // bnb: process.env.BSCSCAN_API_KEY ?? ''
+      mainnet: process.env.BASESCAN_API_KEY ?? '',
+      optimisticEthereum: process.env.OPSCAN_API_KEY ?? '',
+      polygon: process.env.POLYGONSCAN_API_KEY ?? '',
+      base: process.env.BASESCAN_API_KEY ?? '',
+      mantle: process.env.MANTLESCAN_API_KEY ?? '',
+      worldChain: process.env.WORLDSCAN_API_KEY ?? '',
     },
-    // customChains: [
-    //   {
-    //     network: "bnb",
-    //     chainId: 56,
-    //     urls: {
-    //       apiURL: "https://api.bscscan.com/api",
-    //         browserURL: "https://bscscan.com/"
-    //     }
-    //   }
-    // ]
+    customChains: [
+      {
+        network: "worldChain",
+        chainId: 480,
+        urls: {
+          apiURL: "https://api.worldscan.org/api",
+          browserURL: "https://worldscan.org/"
+        }
+      },
+      {
+        network: "mantle",
+        chainId: 5000,
+        urls: {
+          apiURL: "https://api.mantlescan.xyz/api",
+          browserURL: "https://mantlescan.xyz/"
+        }
+      }
+    ]
   },
   ignition: {
     strategyConfig: {
