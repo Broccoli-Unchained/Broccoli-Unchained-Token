@@ -130,7 +130,7 @@ const config: HardhatUserConfig = {
       accounts: [process.env.PRIVATE_KEY],
       chainId: 34443
     },
-    "MetalL2": {
+    "metalL2": {
       url: "https://metall2.drpc.org",
       accounts: [process.env.PRIVATE_KEY],
       chainId: 1750
@@ -157,6 +157,7 @@ const config: HardhatUserConfig = {
       mantle: process.env.MANTLESCAN_API_KEY ?? '',
       worldChain: process.env.WORLDSCAN_API_KEY ?? '',
       ink: 'empty',
+      metalL2: 'empty'
     },
     customChains: [
       {
@@ -181,6 +182,14 @@ const config: HardhatUserConfig = {
         urls: {
           apiURL: "https://explorer.inkonchain.com/api",
           browserURL: "https://explorer.inkonchain.com"
+        }
+      },
+      {
+        network: "metalL2",
+        chainId: 1750,
+        urls: {
+          apiURL: "https://explorer-metal-mainnet-0.t.conduit.xyz/api",
+          browserURL: "https://explorer-metal-mainnet-0.t.conduit.xyz:443"
         }
       }
     ]
