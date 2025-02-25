@@ -110,7 +110,7 @@ const config: HardhatUserConfig = {
       accounts: [process.env.PRIVATE_KEY],
       chainId: 130
     },
-    "Ink": {
+    "ink": {
       url: "https://ink.drpc.org",
       accounts: [process.env.PRIVATE_KEY],
       chainId: 57073
@@ -156,6 +156,7 @@ const config: HardhatUserConfig = {
       base: process.env.BASESCAN_API_KEY ?? '',
       mantle: process.env.MANTLESCAN_API_KEY ?? '',
       worldChain: process.env.WORLDSCAN_API_KEY ?? '',
+      ink: 'empty',
     },
     customChains: [
       {
@@ -172,6 +173,14 @@ const config: HardhatUserConfig = {
         urls: {
           apiURL: "https://api.mantlescan.xyz/api",
           browserURL: "https://mantlescan.xyz/"
+        }
+      },
+      {
+        network: "ink",
+        chainId: 57073,
+        urls: {
+          apiURL: "https://explorer.inkonchain.com/api",
+          browserURL: "https://explorer.inkonchain.com"
         }
       }
     ]
