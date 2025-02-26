@@ -144,6 +144,11 @@ const config: HardhatUserConfig = {
       url: "https://shape-mainnet.g.alchemy.com/public",
       accounts: [process.env.PRIVATE_KEY],
       chainId: 360
+    },
+    "moonbeam": {
+      url: "https://moonbeam-rpc.publicnode.com",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 1284
     }
   },
   etherscan: {
@@ -156,6 +161,7 @@ const config: HardhatUserConfig = {
       base: process.env.BASESCAN_API_KEY ?? '',
       mantle: process.env.MANTLESCAN_API_KEY ?? '',
       worldChain: process.env.WORLDSCAN_API_KEY ?? '',
+      moonbeam: process.env.MOONSCAN_API_KEY ?? '',
       ink: 'empty',
       metalL2: 'empty'
     },
