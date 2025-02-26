@@ -85,7 +85,7 @@ const config: HardhatUserConfig = {
       accounts: [process.env.PRIVATE_KEY],
       chainId: 10
     },
-    "ArbitrumOne": {
+    "arbitrumOne": {
       url: "https://arbitrum-one-rpc.publicnode.com",
       accounts: [process.env.PRIVATE_KEY],
       chainId: 42161
@@ -162,6 +162,7 @@ const config: HardhatUserConfig = {
       mantle: process.env.MANTLESCAN_API_KEY ?? '',
       worldChain: process.env.WORLDSCAN_API_KEY ?? '',
       moonbeam: process.env.MOONSCAN_API_KEY ?? '',
+      arbitrumOne: process.env.ARBISCAN_API_KEY ?? '',
       ink: 'empty',
       metalL2: 'empty'
     },
